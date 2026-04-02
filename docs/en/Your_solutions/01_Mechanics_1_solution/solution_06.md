@@ -1,117 +1,107 @@
-# Problem 6: Variable Velocity
+# Optimization Problem Solution
 
-We are given the velocity function $v(t)=t^2+2t-5$ and the initial position $x(0)=4$.
-
-We want:
-
-1. The position at $t=3$, i.e. $x(3)$.
-2. The acceleration at $t=3$, i.e. $a(3)$.
+## **Variable Velocity Solution**
 
 ---
 
-## 1) Position from velocity theory
+## **Problem**
 
-Velocity is the derivative of position:
+An object's velocity is given by the function:
+$$v(t) = t^2 + 2t - 5$$
 
-$$
-v(t)=\frac{dx}{dt}
-$$
+**Initial Conditions (at $t=0$):**
+- Position: $x_0 = 4$
 
-So:
-
-$$
-\frac{dx}{dt}=t^2+2t-5
-$$
-
-Integrate both sides with respect to $t$:
-
-$$
-x(t)=\int (t^2+2t-5)\,dt
-$$
-
-Compute the integral term-by-term:
-
-$$
-\int t^2\,dt=\frac{t^3}{3},\qquad
-\int 2t\,dt=t^2,\qquad
-\int (-5)\,dt=-5t
-$$
-
-So the general position function is:
-
-$$
-x(t)=\frac{t^3}{3}+t^2-5t+C
-$$
-
-Use the initial condition $x(0)=4$:
-
-$$
-x(0)=\frac{0^3}{3}+0^2-5\cdot 0 + C = C = 4
-$$
-
-Therefore:
-
-$$
-x(t)=\frac{t^3}{3}+t^2-5t+4
-$$
-
-Now evaluate at $t=3$:
-
-$$
-x(3)=\frac{3^3}{3}+3^2-5\cdot 3+4
-=\frac{27}{3}+9-15+4
-=9+9-15+4
-$$
-
-Compute:
-$$
-9+9=18,\qquad 18-15=3,\qquad 3+4=7
-$$
-
-So:
-
-$$
-x(3)=7
-$$
+**Find:**
+1. The **acceleration** ($a$) at $t = 3$.
+2. The **position** ($x$) at $t = 3$.
 
 ---
 
-## 2) Acceleration from velocity
+# **Step 1: Find the Acceleration ($a$)**
 
-Acceleration is the derivative of velocity:
-
-$$
-a(t)=\frac{dv}{dt}
-$$
-
-Differentiate:
-
-$$
-v(t)=t^2+2t-5
-\quad\Rightarrow\quad
-a(t)=2t+2
-$$
-
-Evaluate at $t=3$:
-
-$$
-a(3)=2\cdot 3 + 2 = 8
-$$
+👉 Acceleration is the **first derivative** of velocity with respect to time ($a = \frac{dv}{dt}$).
 
 ---
 
-## Final answers
+## 🧠 WHY use a derivative?
 
-$$
-x(3)=7
-$$
-
-$$
-a(3)=8
-$$
+- Velocity tells us how position changes.
+- Acceleration tells us how **velocity** changes. 
+- To find the "rate of change" of velocity at a specific moment, we take the derivative.
 
 ---
 
-## Plot the velocity and acceleration
+## The Calculation:
 
-![Velocity and Acceleration Plots](velocity_acceleration_plots.png)
+Take the derivative of $v(t) = t^2 + 2t - 5$:
+$$a(t) = \frac{d}{dt}(t^2 + 2t - 5)$$
+$$a(t) = 2t + 2$$
+
+Now, substitute $t = 3$:
+$$a(3) = 2(3) + 2$$
+$$a(3) = 6 + 2 = 8 \, \text{m/s}^2$$
+
+---
+
+# **Step 2: Find the Position Function ($x(t)$)**
+
+👉 Position is the **integral** of velocity: $x(t) = \int v(t) \, dt + C$.
+
+---
+
+## 🧠 WHY use an integral?
+
+- Velocity is the derivative of position. 
+- To "reverse" a derivative and go back to the original position, we must integrate.
+- The constant $C$ represents our starting point ($x_0$).
+
+---
+
+## The Integration:
+
+$$\int (t^2 + 2t - 5) \, dt$$
+$$x(t) = \frac{1}{3}t^3 + t^2 - 5t + C$$
+
+Use the initial condition $x(0) = 4$ to find $C$:
+$$4 = \frac{1}{3}(0)^3 + (0)^2 - 5(0) + C$$
+$$C = 4$$
+
+**Final Position Equation:**
+$$x(t) = \frac{1}{3}t^3 + t^2 - 5t + 4$$
+
+---
+
+# **Step 3: Calculate Position at $t = 3$**
+
+Now, substitute $t = 3$ into our new position equation:
+
+$$x(3) = \frac{1}{3}(3)^3 + (3)^2 - 5(3) + 4$$
+
+---
+
+## Calculation:
+
+$$x(3) = \frac{1}{3}(27) + 9 - 15 + 4$$
+$$x(3) = 9 + 9 - 15 + 4$$
+$$x(3) = 18 - 15 + 4$$
+$$x(3) = 7 \, \text{m}$$
+
+---
+
+## ✅ RESULT
+
+👉 At $t = 3$:
+- **Acceleration:** $8 \, \text{m/s}^2$
+- **Position:** $7 \, \text{m}$
+
+---
+
+# **🔥 FINAL SUMMARY**
+
+- To go from Velocity to Acceleration → **Take the Derivative**.
+- To go from Velocity to Position → **Take the Integral**.
+- Don't forget the **Initial Position ($x_0$)**; it's the "starting line" of your journey!
+
+👉 **Acceleration:** $8 \, \text{m/s}^2$  
+👉 **Position:** $7 \, \text{m}$
