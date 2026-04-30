@@ -12,6 +12,15 @@ The velocity is **perpendicular** to the magnetic field.
 
 ---
 
+## 🧠 What is this problem about?
+
+This problem describes a **charged particle moving in a magnetic field**.
+
+When a charged particle moves inside a magnetic field, it experiences a **magnetic force**.  
+We are asked to find the **magnitude of this force**.
+
+---
+
 ## 📌 Formula
 
 F = q × v × B × sin(θ)
@@ -20,34 +29,33 @@ F = q × v × B × sin(θ)
 
 ## ❓ What does this formula mean?
 
-This formula gives the **magnetic force acting on a moving charged particle**.
+This is the **Lorentz force formula**, which gives the force acting on a moving charge in a magnetic field.
+
+### Meaning of terms:
+- **F** → magnetic force (what we want to find)  
+- **q** → charge of the particle  
+- **v** → velocity (speed of motion)  
+- **B** → magnetic field strength  
+- **θ** → angle between velocity and magnetic field  
 
 ---
 
-## 🔍 Meaning of each term
+## ❓ Why is sin(θ) included?
 
-- **F (Force):** the magnetic force acting on the particle (in Newtons)  
-- **q (charge):** the electric charge of the particle  
-- **v (velocity):** the speed of the particle  
-- **B (magnetic field):** the strength of the magnetic field  
-- **θ (theta):** the angle between velocity and magnetic field  
+The magnetic force depends only on the **perpendicular component of velocity**.
 
----
-
-## ❓ Why is sin(θ) in the formula?
-
-- The force depends only on the **perpendicular component** of velocity  
-- This comes from a **vector (cross product)** relationship  
-- If motion is parallel → no force  
+- If motion is parallel to the field → no force  
 - If motion is perpendicular → maximum force  
 
 ---
 
-## 🎯 In this question
+## 🎯 Special case in this problem
+
+The particle moves **perpendicular** to the field:
 
 sin(90°) = 1  
 
-So the formula becomes:
+So the formula simplifies to:
 
 F = q × v × B  
 
@@ -80,3 +88,6 @@ F = 1 × 10<sup>-13</sup> N
 ## ✅ Final Answer
 
 👉 F = 1 × 10<sup>-13</sup> N  
+
+---
+
